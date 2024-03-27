@@ -71,6 +71,10 @@ app.get("/follow", (request, response) => {
   response.redirect("/redirected")
 })
 
+app.get("/follow-external-redirect", (request, response) => {
+  response.redirect("https://turbo.hotwired.dev")
+})
+
 app.get("/redirected", (request, response) => {
   response.render("redirected", { title: "Redirected Page" })
 })
